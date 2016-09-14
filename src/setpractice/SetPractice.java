@@ -18,7 +18,7 @@ public class SetPractice {
      */
     public static void main(String[] args) {
        int[] a = {1,2,3,6,5,4,7,8,9}; //I will fisrt created a collection
-       Set<Integer> set = new HashSet<Integer>(); // Then I created HashSet and refer it as set
+       HashSet<Integer> set = new HashSet<Integer>(); // Then I created HashSet and refer it as set
         // Now I'm gonna put items from a[] to my set using add function
         //Watch out the cool enhanced for loop I'm using below
        for(int x:a) {
@@ -33,9 +33,20 @@ public class SetPractice {
        while(iterator.hasNext()){
        System.out.println("The value from set.iterator is: "+iterator.next());
        }
+    //other metheds tests
+    System.out.println("The set contains 9: "+set.contains(9) );
+    System.out.println("The set contains 14: "+set.contains(14) );
+    
+    Set<Integer> temp = new HashSet<Integer>();
+    temp.add(2);temp.add(3);temp.add(5);
+    System.out.println("The set contains 2,3 and 5: "+set.containsAll(temp));
+   
+    //boolean isremoved = set.remove(2);
+    //System.out.println(isremoved+" "+set);
+    set.remove(2); System.out.println(set); //remove method returns a boolean value
     
       set.clear(); System.out.println(set); // Try clear() method
-      //To be continued...
+     
     }
     
 }

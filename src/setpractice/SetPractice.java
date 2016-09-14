@@ -26,9 +26,16 @@ public class SetPractice {
        }
       //What's the result? Try it.
       System.out.println(set); //The order has changed
-      
-      // TO be continued...
-      
+      System.out.println(set.size()); // Show the size of the set
+      // Now I'll test iterator method
+      Iterator iterator = set.iterator();
+     //check value
+       while(iterator.hasNext()){
+       System.out.println("The value from set.iterator is: "+iterator.next());
+       }
+    
+      set.clear(); System.out.println(set); // Try clear() method
+      //To be continued...
     }
     
 }
